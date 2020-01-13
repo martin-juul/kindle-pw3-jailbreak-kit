@@ -1,0 +1,68 @@
+{
+	"items": [
+	{
+		"name": "Helper",
+		"priority": -998,
+		"items": [
+		{
+			"if": "\"KindleTouch\" -m \"KindlePaperWhite\" -m \"KindlePaperWhite2\" -m \"KindleBasic\" -m \"KindleVoyage\" -m \"KindlePaperWhite3\" -m \"KindleOasis\" -m  \"KindleBasic2\" -m \"KindleOasis2\" -m \"KindlePaperWhite4\" -m \"KindleBasic3\" -m \"KindleOasis3\" -m || || || || || || || || || || ||",
+			"name": "FORCE Grayed UYK",
+			"priority": 1,
+			"action": "./bin/start_update.sh"
+		},
+		{
+			"name": "PREVENT OTA Updates",
+			"priority": 2,
+			"action": "./bin/otaprevent.sh",
+			"exitmenu": false,
+			"checked": true,
+			"status": false,
+			"internal": "status Blocked OTA updates"
+		},
+		{
+			"name": "ALLOW OTA Updates",
+			"priority": 3,
+			"action": "./bin/otaallow.sh",
+			"exitmenu": false,
+			"checked": true,
+			"status": false,
+			"internal": "status Unblocked OTA updates"
+		},
+		{
+			"name": "PREVENT ScreenSaver",
+			"priority": 4,
+			"action": "./bin/ssprevent.sh",
+			"exitmenu": false,
+			"checked": true,
+			"status": false,
+			"internal": "status Sleep mode disabled"
+		},
+		{
+			"name": "ALLOW ScreenSaver",
+			"priority": 5,
+			"action": "./bin/ssallow.sh",
+			"exitmenu": false,
+			"checked": true,
+			"status": false,
+			"internal": "status Sleep mode enabled"
+		},
+		{
+			"if": "\"KindleTouch\" -m \"KindlePaperWhite\" -m \"KindlePaperWhite2\" -m \"KindleBasic\" -m \"KindleVoyage\" -m  \"KindlePaperWhite3\" -m \"KindleOasis\" -m  \"KindleBasic2\" -m \"KindleOasis2\" -m \"KindlePaperWhite4\" -m \"KindleBasic3\" -m \"KindleOasis3\" -m || || || || || || || || || || ||",
+			"name": "SHOW Network Info",
+			"priority": 6,
+			"action": "./bin/411.sh",
+			"params": "711"
+		},
+		{
+			"name": "Device ID",
+			"priority": 7,
+			"exitmenu": false,
+			"date": true,
+			"checked": true,
+			"refresh": false,
+			"action": "./bin/device_id.sh"
+		}
+		]
+	}
+	]
+}

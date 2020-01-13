@@ -1,0 +1,35 @@
+{
+	"comment001": "Detailed Battery Status",
+	"comment002": "",
+	"comment003": "$Id: menu.json 13339 2016-07-08 21:13:56Z NiLuJe $",
+	"comment004": "",
+	"items": [
+	{
+		"name": "Helper",
+		"priority": -998,
+		"items": [
+		{
+			"name": "Print Battery Status",
+			"priority": -2,
+			"exitmenu": false,
+			"date": true,
+			"checked": true,
+			"refresh": false,
+			"action": "./bin/battery-status.sh",
+			"params": "print_detailed_status"
+		},
+		{
+			"name": "Tweak Battery Icon",
+			"if": "\"KindleTouch\" -m \"KindlePaperWhite\" -m \"KindlePaperWhite2\" -m || ||",
+			"priority": -1,
+			"exitmenu": false,
+			"date": true,
+			"checked": true,
+			"refresh": false,
+			"action": "./bin/battery-status.sh",
+			"params": "tweak_battery_icon"
+		}
+		]
+	}
+	]
+}

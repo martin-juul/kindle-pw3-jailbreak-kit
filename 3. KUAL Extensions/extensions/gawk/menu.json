@@ -1,0 +1,24 @@
+{
+	"comment001": "gawk install script",
+	"comment002": "",
+	"comment003": "$Id: menu.json 11306 2014-12-23 14:57:51Z NiLuJe $",
+	"comment004": "",
+	"items": [
+	{
+		"name": "KUAL",
+		"priority": -999,
+		"items": [
+		{
+			"name": "* Install gawk binary *",
+			"if": "\"/mnt/us/extensions/gawk/bin/gawk\" -f!",
+			"priority": 99,
+			"exitmenu": true,
+			"date": true,
+			"checked": true,
+			"refresh": false,
+			"action": "./bin/gawk-install.sh"
+		}
+		]
+	}
+	]
+}
